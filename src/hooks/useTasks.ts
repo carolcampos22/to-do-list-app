@@ -1,38 +1,52 @@
-import { useEffect, useState } from "react"
-import { Task } from "../models/model"
+import { useState, useEffect } from 'react';
+import { Task } from '../models/model';
 
 export const useTasks = () => {
-    const [tasks, setTasks] = useState<Task[]>([])
-
-    useEffect(() => {
-        const storedTasks = localStorage.getItem("tasks")
-
-        if (storedTasks) {
-            setTasks(JSON.parse(storedTasks))
-        }
-    }, [])
-
-    useEffect(() => {
-        localStorage.setItem("tasks", JSON.stringify(tasks))
-    }, [tasks])
-
-    const addTask = (title: string) => {
-        const newTask: Task = {
-            id: Date.now(),
-            title,
-            completed: false
-        }
-
-        setTasks([...tasks, newTask])
+  const [tasks, setTasks] = useState<Task[]>([]); 
+  
+  useEffect(() => {
+    const savedTasks = localStorage.getItem('tasks');
+    if (savedTasks) {
+      setTasks(JSON.parse(savedTasks)); 
     }
+  }, []);
 
-    const toggleTaskCompletion = (id: number) => {
-        tasks.map((task) => task.id === id ? { ...task, completed: !task.completed } : task)
-    }
+  const saveTasksToLocalStorage = (updatedTasks: Task[]) => {
+    localStorage.setItem('tasks', JSON.stringify(updatedTasks));
+  };
 
-    const deleteTask = (id: number) => {
-        tasks.filter((task) => task.id !== id)
-    }
+  const addTask = (title: string) => {
+    const newTask: Task = {
+      id: +new Date(), 
+      title,
+      completed: false,
+    };
 
-    return { tasks, addTask, toggleTaskCompletion, deleteTask }
-}
+    const updatedTasks = [...tasks, newTask]; 
+    setTasks(updatedTasks); 
+    saveTasksToLocalStorage(updatedTasks); 
+  };
+
+  const toggleTaskCompletion = (id: number) => {
+    const updatedTasks = tasks.map((task) =>
+      task.id === id ? { ...task, completed: !task.completed } : task
+    );
+
+    setTasks(updatedTasks);
+    saveTasksToLocalStorage(updatedTasks);
+  };
+
+  const deleteTask = (id: number) => {
+    const updatedTasks = tasks.filter((task) => task.id !== id);
+
+    setTasks(updatedTasks);
+    saveTasksToLocalStorage(updatedTasks);
+  };
+
+  return {
+    tasks, 
+    addTask, 
+    toggleTaskCompletion, 
+    deleteTask,
+  };
+};
