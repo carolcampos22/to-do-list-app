@@ -11,24 +11,30 @@ export const AddTaskModal = ({ onAdd, onClose }: AddTaskModalProps) => {
 
   const handleAddTask = () => {
     if (taskTitle.trim()) {
-      onAdd(taskTitle); // Chama a função `onAdd` passada pelo pai (TaskList)
-      setTaskTitle(""); // Limpa o campo de input
-      onClose(); // Fecha o modal
+      onAdd(taskTitle);
+      setTaskTitle("");
+      onClose();
     }
   };
 
   return (
     <div className={styles.modal}>
       <div className={styles.modal_content}>
-        <h2>Adicionar Tarefa</h2>
-        <input
-          type="text"
-          value={taskTitle}
-          onChange={(e) => setTaskTitle(e.target.value)}
-          placeholder="Digite o nome da tarefa"
-        />
-        <button onClick={handleAddTask}>Adicionar Tarefa</button>
-        <button onClick={onClose}>Cancelar</button>
+        <h2 className={styles.new_task_paragraph}>Nova Tarefa</h2>
+        <div className={styles.input_task_container}>
+          <label>Título</label>
+          <input
+            className={styles.input_task}
+            type="text"
+            value={taskTitle}
+            onChange={(e) => setTaskTitle(e.target.value)}
+            placeholder="Digite"
+          />
+        </div>
+        <div className={styles.buttons_container}>          
+          <button className={styles.cancel_button} onClick={onClose}>Cancelar</button>
+          <button className={styles.add_task_button} onClick={handleAddTask}>Adicionar</button>
+        </div>
       </div>
     </div>
   );

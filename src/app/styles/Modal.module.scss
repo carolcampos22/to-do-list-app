@@ -4,16 +4,100 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.9);
     display: flex;
     justify-content: center;
     align-items: center;
   }
   
   .modal_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 2vh;
+    width: 23vw;
     background-color: white;
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    box-shadow: 0px 24px 48px -12px #1018282E;
+
+    h2{
+      font-weight: 500;
+      font-size: 24px;
+    }
+
+  }
+
+  .input_task_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: .5vh;
+  }
+
+  .input_task{
+    height: 5vh;
+    width: 22vw;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
+
+  .input_task::placeholder{
+    padding-left: 1rem;
+  }
+
+  .buttons_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
   }
   
+  .add_task_button {
+    background: linear-gradient(to right, #0796D3, #53C0F0); 
+    color: white; 
+    width: 9vw;
+    height: 5vh;
+    font-size: 16px; 
+    font-weight: 500;
+    padding: 0.5rem 1rem; 
+    border: none; 
+    border-radius: 8px; 
+    cursor: pointer; 
+  
+    &:hover {
+      background: linear-gradient(to right, #53C0F0, #0796D3); 
+    }
+  }
+
+  .cancel_button {
+    background-color: #E7EEFB;
+    height: 5vh;
+    width: 9vw;
+    border: none; 
+    border-radius: 8px; 
+    padding: 16px, 24px, 16px, 24px;
+    cursor: pointer; 
+  }
+  
+  .delete_button{
+    background: linear-gradient(to right, #D30707, #F05353);
+    color: #FFFFFF;
+    height: 5vh;
+    width: 9vw;
+    border: none; 
+    border-radius: 8px; 
+    padding: 16px, 24px, 16px, 24px;
+    cursor: pointer;  
+    &:hover {
+      background: linear-gradient(to right, #F05353, #D30707); 
+    }
+  }
+
+  .new_task_paragraph{
+    font-weight: 500;
+    font-size: 24px;
+    color: #000000;
+  }
