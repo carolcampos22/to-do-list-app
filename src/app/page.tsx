@@ -33,10 +33,6 @@ export default function Home() {
             />
           )}
         </div>
-
-        <div>
-          <p>Tarefas finalizadas</p>
-        </div>
       </div>
 
     </>
