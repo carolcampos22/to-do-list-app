@@ -2,6 +2,7 @@ import { useTasks } from "../hooks/useTasks";
 import { TaskItem } from "./TaskItem";
 import { AddTaskModal } from "./AddTaskModal";
 import { useState } from "react";
+import styles from "../app/styles/TaskList.module.scss"
 
 export const TaskList = () => {
   const { tasks, addTask, toggleTaskCompletion, deleteTask } = useTasks(); 
@@ -11,8 +12,7 @@ export const TaskList = () => {
   const handleCloseModal = () => setIsModalOpen(false);
 
   return (
-    <>
-      
+    <>     
       
       {isModalOpen && (
         <AddTaskModal 
@@ -31,7 +31,7 @@ export const TaskList = () => {
           />
         ))}
       </ul>
-      <button onClick={handleOpenModal}>Adicionar nova tarefa</button>
+      <button className={styles.add_task} onClick={handleOpenModal}>Adicionar nova tarefa</button>
     </>
   );
 };

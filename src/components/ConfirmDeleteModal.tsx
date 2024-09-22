@@ -7,11 +7,13 @@ type ConfirmDeleteModalProps = {
 
 export const ConfirmDeleteModal = ({ onConfirm, onCancel }: ConfirmDeleteModalProps) => (
   <div className={styles.modal}>
-    <div className={styles.modal_content}> 
-      <h2>Confirmar Exclusão</h2>
-      <p>Tem certeza que deseja excluir essa tarefa?</p>
-      <button onClick={onConfirm}>Confirmar</button>
-      <button onClick={onCancel}>Cancelar</button>
+    <div className={styles.modal_content}>
+      <h2>Deletar tarefa</h2>
+      <p>Tem certeza que você deseja deletar essa tarefa?</p>
+      <div className={styles.buttons_container}>
+        <button className={styles.cancel_button} onClick={onCancel}>Cancelar</button>
+        <button className={styles.delete_button} onClick={onConfirm}>Deletar</button>
+      </div>
     </div>
   </div>
 );

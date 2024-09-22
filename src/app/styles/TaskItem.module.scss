@@ -1,0 +1,28 @@
+.taskItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .8rem;
+  background-color: white;
+  margin: 0.5rem 0;
+  border-radius: 4px;
+  width: 20vw;
+  height: 3vh;
+  border: 1px dashed rgba(0, 0, 0, 0.1);
+  
+
+  @media(max-width: 1000px){
+    width: 50vw;
+  }
+}
+
+.taskItem.completed {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.taskItem input[type='checkbox'] {
+  margin-right: 1rem;
+}
+
+  

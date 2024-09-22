@@ -1,6 +1,7 @@
 import { Task } from '../models/model';
 import { useState } from 'react';
 import { ConfirmDeleteModal } from './ConfirmDeleteModal';
+import styles from "../app/styles/TaskItem.module.scss";
 
 type TaskItemProps = {
   task: Task;
@@ -18,7 +19,7 @@ export const TaskItem = ({ task, onToggleCompletion, onDelete }: TaskItemProps) 
 
   return (
     <>
-      <li className={task.completed ? "completed" : ""}>
+      <li className={`${styles.taskItem} ${task.completed ? styles.completed : ''}`}>
         <input type="checkbox" checked={task.completed} onChange={onToggleCompletion} />
         {task.title}
         <button onClick={() => setShowConfirmModal(true)}>🗑️</button>
@@ -33,4 +34,3 @@ export const TaskItem = ({ task, onToggleCompletion, onDelete }: TaskItemProps) 
     </>
   );
 };
-

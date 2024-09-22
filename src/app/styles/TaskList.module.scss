@@ -1,0 +1,21 @@
+.add_task {
+    background: linear-gradient(to right, #0796D3, #53C0F0); 
+    color: white; 
+    width: 20vw;
+    height: 5vh;
+    font-size: 16px; 
+    font-weight: 500;
+    padding: 0.5rem 1rem; 
+    border: none; 
+    border-radius: 8px; 
+    cursor: pointer; 
+  
+    &:hover {
+      background: linear-gradient(to right, #53C0F0, #0796D3); 
+    }
+
+    @media(max-width: 1000px){
+      width: 70%;
+    }
+  }
+  
