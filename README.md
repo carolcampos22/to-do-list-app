@@ -1,6 +1,6 @@
 # To-Do List Application
 
-Este é um projeto de uma To-Do List simples construído com **Next.js** usando **App Router**, **SCSS** para estilização e **LocalStorage** para persistência de dados.
+Este é um projeto de uma To-Do List simples construído com **Next.js**, utilizando **SCSS** para estilização e **LocalStorage** para persistência de dados.
 
 ## Funcionalidades
 
@@ -9,18 +9,21 @@ Este é um projeto de uma To-Do List simples construído com **Next.js** usando 
 - **Deletar tarefas**: As tarefas podem ser excluídas após confirmação em um modal.
 - **Persistência de dados**: As tarefas são armazenadas no LocalStorage para persistirem após recarregar a página.
 
+## Layout
+![](./src/public/up-task.png)
+
 ## Como rodar o projeto localmente
 
 1. Clone este repositório:
 
     ```bash
-    git clone https://github.com/carolcampos22/teste-dev-junior.git
+    git clone https://github.com/carolcampos22/to-do-list-app.git
     ```
 
 2. Acesse o diretório do projeto:
 
     ```bash
-    cd teste-dev-junior
+    cd to-do-list-app
     ```
 
 3. Instale as dependências:

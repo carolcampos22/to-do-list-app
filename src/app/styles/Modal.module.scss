@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 .modal {
     position: fixed;
     top: 0;
@@ -40,12 +42,15 @@
   .input_task{
     height: 5vh;
     width: 22vw;
+    padding: .3rem;
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 10px;
+    font-family: "Pacifico", cursive;
   }
 
   .input_task::placeholder{
     padding-left: 1rem;
+    font-family: "Pacifico", cursive;
   }
 
   .buttons_container{
@@ -80,6 +85,7 @@
     border-radius: 8px; 
     padding: 16px, 24px, 16px, 24px;
     cursor: pointer; 
+    font-family: "Pacifico", cursive;
   }
   
   .delete_button{
@@ -91,6 +97,7 @@
     border-radius: 8px; 
     padding: 16px, 24px, 16px, 24px;
     cursor: pointer;  
+    font-family: "Pacifico", cursive;
     &:hover {
       background: linear-gradient(to right, #F05353, #D30707); 
     }

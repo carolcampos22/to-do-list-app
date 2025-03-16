@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 .add_task {
     background: linear-gradient(to right, #0796D3, #53C0F0); 
     color: white; 
@@ -9,6 +11,7 @@
     border: none; 
     border-radius: 8px; 
     cursor: pointer; 
+    font-family: "Pacifico", cursive;
   
     &:hover {
       background: linear-gradient(to right, #53C0F0, #0796D3); 
