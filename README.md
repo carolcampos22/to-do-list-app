@@ -1,6 +1,6 @@
 # To-Do List Application
 
-Este é um projeto de uma To-Do List simples construído com **Next.js**, utilizando **SCSS** para estilização e **LocalStorage** para persistência de dados.
+Este é um projeto de uma lista de tarefas simples, construído com **Next.js**, utilizando **SCSS** para estilização e **LocalStorage** para persistência de dados.
 
 ## Funcionalidades
 
