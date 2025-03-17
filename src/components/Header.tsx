@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 
 export const Header = () => {
 
-    const showDate = () => {
+    const ShowDate = () => {
         const currentDate = new Date()
 
         const daysOfTheWeek = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"]
@@ -22,12 +22,12 @@ export const Header = () => {
         return formattedDate
     }
 
-    function clock(){
-        const [time, setTime] = useState(showTime())
+    function Clock(){
+        const [time, setTime] = useState(ShowTime())
 
         useEffect(() => {
             const interval = setInterval(() => {
-                setTime(showTime())
+                setTime(ShowTime())
             }, 1000)
 
             return () => clearInterval(interval)
@@ -36,7 +36,7 @@ export const Header = () => {
         return time     
     }
 
-    const showTime = () => {
+    const ShowTime = () => {
         const now = new Date()
 
         const hours = String(now.getHours()).padStart(2, "0")
@@ -56,8 +56,8 @@ export const Header = () => {
             </div>
             <h1>UpTask</h1>
             <div className={styles.date_time}>
-                <span>{showDate()}</span>
-                <span className={styles.time}>{clock()}</span>
+                <span>{ShowDate()}</span>
+                <span className={styles.time}>{Clock()}</span>
             </div>
         </div>
     );
