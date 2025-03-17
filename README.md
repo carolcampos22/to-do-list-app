@@ -10,7 +10,17 @@ Este é um projeto de uma lista de tarefas simples, construído com **Next.js**,
 - **Persistência de dados**: As tarefas são armazenadas no LocalStorage para persistirem após recarregar a página.
 
 ## Layout
-![](./src/public/up-task.png)
+1. Lista de tarefas
+
+![](./src/public/prints/up-task.png)
+
+2. Criar nova tarefa
+
+![](./src/public/prints/new-task.png)
+
+3. Deletar tarefa
+
+![](./src/public/prints/delete-task.png)
 
 ## Como rodar o projeto localmente
 

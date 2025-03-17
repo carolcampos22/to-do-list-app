@@ -1,4 +1,4 @@
-.header{
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -7,38 +7,50 @@
     border-bottom: 1px solid rgba(85, 85, 85, 0.2);
     padding-bottom: 1vh;
 
-    p{
+    p {
         font-weight: 500;
         font-size: 24px;
         color: #000000;
 
     }
 
-    span{
+    span {
         color: #0000008A;
         font-weight: 400;
 
     }
 
-    @media(max-width: 1000px){
+    @media(max-width: 1000px) {
         flex-direction: column;
         align-items: start;
         padding-bottom: 3vh;
         line-height: 19.36px;
-        p, span{
+
+        p,
+        span {
             font-size: 16px;
         }
     }
 }
 
-.logo{
+.logo {
     display: flex;
     justify-content: center;
     align-items: center;
     color: #101828;
 }
 
-.logo img{
+.logo img {
     width: 10vw;
     height: 10vw;
+}
+
+.date_time {
+    display: flex;
+    flex-direction: column;
+}
+
+.time {
+    font-size: 1.5rem;
+
 }
