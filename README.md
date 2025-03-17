@@ -22,6 +22,9 @@ Este é um projeto de uma lista de tarefas simples, construído com **Next.js**,
 
 ![](./src/public/prints/delete-task.png)
 
+## Link do site
+[Acesse o site aqui](https://to-do-list-app-gamma-gules.vercel.app/)
+
 ## Como rodar o projeto localmente
 
 1. Clone este repositório:
